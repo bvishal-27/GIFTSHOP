@@ -1,0 +1,27 @@
+{% extends 'navigation.html' %}
+{% block body %}
+{% load static %}
+
+
+
+
+<div class="container">
+    <h2 style="margin-top:20px" align="center">Booking Between Dates Report :</h2><hr>
+
+<div class="container-fluid" style="width:70%;margin-top:10%">
+<form method="post" action="">
+    {% csrf_token %}
+  <div class="form-group">
+    <label >From Date</label>
+    <input type="date" class="form-control" name="fromdate">
+
+      <label >To Date</label>
+    <input type="date" class="form-control" name="todate">
+  </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+
+{% endblock %}
